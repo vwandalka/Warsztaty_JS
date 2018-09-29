@@ -47,4 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                       
 //zadanie 4
     
+    var goUp = document.querySelector('.goUp'); 
+    
+    window.addEventListener('click', function() {
+        window.scroll(0,0)
+    })
+   
+    
                             });
