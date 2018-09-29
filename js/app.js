@@ -47,11 +47,38 @@ document.addEventListener('DOMContentLoaded', function() {
                       
 //zadanie 4
     
-    var goUp = document.querySelector('.goUp'); 
+    var goUp = document.getElementById('goUp'); 
     
-    window.addEventListener('click', function() {
+    goUp.addEventListener('click', function() {
         window.scroll(0,0)
     })
    
+//zadanie 5
     
+    var items = document.querySelectorAll('.org'); 
+    var dots = document.querySelectorAll('.dot');      
+    var indexClicked; 
+    
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() {
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+                items[i].classList.remove('visible');
+            }
+            this.classList.add('active');
+            
+            
+            for (var i = 0; i < dots.length; i++) {
+                if (dots[i].classList.contains('active')) {
+                    indexClicked = i; 
+                    break;
+                } 
+    }
+            
+            items[indexClicked].classList.add('visible');
+    }) ;
+    }
+
+//zadanie 6
+   
                             });
